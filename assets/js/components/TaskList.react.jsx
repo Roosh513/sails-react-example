@@ -47,7 +47,9 @@ class DeleteTask extends React.Component {
   onClick(event) {
     API.tasks.remove(this.props.task.id, function(response) {
       TaskActions.removeTask(response.json);
-    })
+    });
+
+    event.stopPropagation();
   }
 
   render() {
@@ -87,9 +89,8 @@ class Task extends React.Component {
 
   render() {
     return (
-      <div>
+      <div onClick={(e) => this.onClick(e)}>
         <span
-          onClick={(e) => this.onClick(e)}
           className={this.state.isComplete ? "strikethrough" : ""}>
           {this.props.task.description}
         </span>

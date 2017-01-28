@@ -25,8 +25,6 @@ Clone the project and change to the working directory and install node dependenc
 
 Start the application by using the sails lift command:
 
-`
-sails lift
-`
+`sails lift`
 
 You're all set! You should be able to navigate to http://localhost:1337. It may take an extra moment for browserify to finish building the JS bundle. The process is automatically kicked off when the `lift` command is executed.
